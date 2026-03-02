@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Jain - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .job-sub {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .tech-category {
+            margin-bottom: 10px;
+        }
+        .tech-label {
+            font-weight: bold;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <button class="btn" onclick="window.print()">Print to PDF</button>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 20px;">
+        <img src="/Profile1.jpeg" alt="Riya Jain" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #333;">
+        <div style="flex: 1;">
+            <h1>Riya Jain</h1>
+            <div class="contact-info" style="text-align: left; margin-bottom: 0;">
+                Redmond, WA | Email: riya_jain92@outlook.com | Phone: +1 (425) 543-8101 | LinkedIn: riya-jain-88143b1a2
+            </div>
+        </div>
+    </div>
+
+    <h2>Summary</h2>
+    <p>
+        Cloud-Focused Full-Stack Engineer with 3+ years of experience designing and modernizing applications using AWS, Java (Spring Boot), React, REST APIs, Databases, building automation systems and CI/CD pipelines to accelerate delivery. Strong background in structured data generation, optimization workflows, LLM-powered applications, and cloud-native services. I thrive in environments that value ownership, continuous learning, and innovation.
+    </p>
+
+    <h2>Experience</h2>
+    <div class="job">
+        <div class="job-header">
+            <span>Software Engineer</span>
+            <span>Bengaluru, India</span>
+        </div>
+        <div class="job-sub">
+            <span>Optum-UnitedHealthGroup</span>
+            <span>May 2022 – April 2025</span>
+        </div>
+        <ul>
+            <li>Modernized legacy monolithic systems into cloud-ready microservices using Java, Spring Boot, and REST APIs, migrating core infrastructure to Azure Cloud and decoupling eligibility, enrollment, and payment modules for Vermont Health Connect — improving reliability and enabling independent deployments with 20% faster data synchronization.</li>
+            <li>Built automated data processing pipelines using Python, SQL, AWS Lambda, and Power BI to generate high-quality structured datasets used for downstream decision systems—reducing manual effort by 200+ hours per release while improving correctness and observability.</li>
+            <li>Implemented rule-based optimization and validation frameworks for eligibility and case processing, enabling consistent ranking, filtering, and prioritization of records under evolving business constraints.</li>
+            <li>Partnered with Product, QA, and Compliance teams to experiment on backend workflows, analyze system metrics, and iterate on data quality improvements—driving 30% reduction in defect leakage across six production releases.</li>
+            <li>Led CI/CD automation on Jenkins and Azure, improving deployment reliability and enabling rapid experimentation across environments; acted as Designated Responsible Individual (DRI) for on-call production monitoring.</li>
+            <li>Delivered accessibility and security enhancements (WCAG 2.1 AA, secure data masking), closing 12+ vulnerabilities while improving user experience and platform trustworthiness.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span>Software Development Intern</span>
+            <span>Pune, India</span>
+        </div>
+        <div class="job-sub">
+            <span>Indiba Business Solutions - IBSL</span>
+            <span>May 2021 – July 2021</span>
+        </div>
+        <ul>
+            <li>Developed features for the ERPNext Digital Signature module using Python and JavaScript, enabling one-click signing for invoices and orders — reducing manual upload steps by 80%. Utilized Docker and Kubernetes for container orchestration, enabling consistent production deployments and improved environment reliability.</li>
+            <li>Helped deploy and test the solution on AWS services, configuring access controls and storage for signed PDFs; this improved reliability and enabled clients to adopt the feature 50% faster with fewer errors.</li>
+        </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="job">
+        <div class="job-header">
+            <span>AI - Powered Neighborhood Finder</span>
+        </div>
+        <ul>
+            <li>Built an AI-driven real estate discovery platform leveraging Large Language Models for semantic summarization, neighborhood insight generation, and content validation—reducing manual data preparation by 90%. Implemented automated relevance scoring and content filtering pipelines to improve listing accuracy and user engagement.</li>
+            <li>Designed conversational retrieval workflows using Node.js + Express backend and React + TypeScript frontend, enabling personalized, context-aware recommendations with 40% lower latency. Deployed on AWS with caching and parallel API queries to support 1K+ concurrent requests with sub-second response times.</li>
+        </ul>
+    </div>
+
+    <h2>Technologies</h2>
+    <div class="tech-category"><span class="tech-label">Languages:</span> Java, JavaScript (ES6+), Python, SQL, PL/SQL, C++, HTML5, CSS3</div>
+    <div class="tech-category"><span class="tech-label">Frameworks/Libraries:</span> Spring Boot, React, Node.js, Bootstrap, JQuery</div>
+    <div class="tech-category"><span class="tech-label">Cloud/DevOps:</span> AWS (EC2, Lambda, S3, RDS), Azure DevOps, Jenkins, Maven, Git, CI/CD, SVN</div>
+    <div class="tech-category"><span class="tech-label">Databases/Testing:</span> Oracle, MySQL, NoSQL, JUnit, Selenium, Test Automation</div>
+    <div class="tech-category"><span class="tech-label">Concepts/Practices:</span> Microservices, Distributed Systems, API Design(REST), Agile, WCAG, Large Language Models</div>
+    <div class="tech-category"><span class="tech-label">Platforms:</span> Liferay, CRMs, Oracle SOA, Power BI, SmythOS, Bolt.new, Jira, ALM</div>
+
+    <h2>Education</h2>
+    <div class="job">
+        <div class="job-header">
+            <span>SRM Institute of Science and Technology</span>
+            <span>July 2018 – May 2022</span>
+        </div>
+        <div class="job-sub">
+            <span>Bachelor of Technology in Electronics and Communication Engineering</span>
+            <span>GPA: 9.5/10</span>
+        </div>
+    </div>
+</body>
+</html>
