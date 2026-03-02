@@ -1,24 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
   
-  --color-brand-primary: #000000;
-  --color-brand-secondary: #4f46e5;
+  --color-accent-indigo: #4f46e5;
+  --color-accent-rose: #f43f5e;
+  --color-accent-amber: #f59e0b;
+  --color-paper: #fdfcf9;
 }
 
 @layer base {
   body {
-    @apply bg-[#f8f9fa] text-zinc-900 font-sans antialiased;
+    @apply bg-paper text-zinc-800 font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif text-zinc-900;
   }
 }
 
-.glass-card {
-  @apply bg-white/80 backdrop-blur-md border border-zinc-200/50 shadow-sm;
+.editorial-card {
+  @apply bg-white rounded-[2rem] overflow-hidden shadow-sm border border-zinc-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1;
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto px-6 py-24;
+  @apply max-w-6xl mx-auto px-6 py-32;
+}
+
+.pill-button {
+  @apply px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-indigo via-accent-rose to-accent-amber;
 }
