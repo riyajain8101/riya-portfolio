@@ -407,7 +407,6 @@ const TESTIMONIALS: Testimonial[] = [
 const HERO_IMAGES = [
   "/Profile1.jpeg",
   "/Profile2.jpeg",
-  "/CherryBlossom.jpeg",
 ];
 
 interface TechItem {
