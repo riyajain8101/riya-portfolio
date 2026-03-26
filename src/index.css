@@ -10,15 +10,21 @@
   --color-accent-rose: #f43f5e;
   --color-accent-amber: #f59e0b;
   --color-paper: #fdfcf9;
+
+  --animate-spin-slow: spin 8s linear infinite;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-paper text-zinc-800 font-sans antialiased;
   }
 
-  h1, h2, h3 {
-    @apply font-serif text-zinc-900;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-zinc-900;
   }
 }
 
@@ -27,7 +33,7 @@
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto px-6 py-32;
+  @apply max-w-6xl mx-auto px-6 py-12 lg:py-20;
 }
 
 .pill-button {

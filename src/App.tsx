@@ -40,7 +40,15 @@ import {
   Server,
   FileCode,
   Palette,
-  Atom
+  Atom,
+  Activity,
+  PenTool,
+  BookOpen,
+  Utensils,
+  Heart,
+  Trophy,
+  Wind,
+  ChefHat
 } from 'lucide-react';
 import { CursorTrail } from './components/CursorTrail';
 import { 
@@ -94,92 +102,63 @@ interface Testimonial {
 const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'AI-Powered Neighborhood Finder',
-    description: 'An intelligent real estate discovery platform that utilizes Large Language Models (LLMs) to analyze and summarize neighborhood data, providing users with semantic insights and personalized location recommendations.',
-    tags: ['React', 'Node.js', 'LLMs', 'AWS'],
+    title: 'AI-Powered Semantic Search',
+    description: 'An intelligent discovery platform utilizing Agentic Workflows and LLMs to analyze neighborhood dynamics, providing users with context-aware insights and personalized location intelligence.',
+    tags: ['LLM Orchestration', 'Semantic Search', 'Node.js', 'AWS'],
     link: '#',
     github: 'https://github.com/riyajain8101',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     details: `
 ### Overview
-AI-Powered Neighborhood Finder is an intelligent real estate discovery platform that helps users make data-driven decisions by transforming raw property listings and neighborhood data into personalized, conversational insights. Instead of manually researching multiple sources, users can ask natural language questions and receive context-aware, AI-generated summaries and recommendations.
+AI-Powered Semantic Search is a next-generation discovery platform that transforms fragmented real estate data into actionable location intelligence. By leveraging **Retrieval-Augmented Generation (RAG)** and **Agentic Workflows**, the system allows users to perform complex, natural language queries to uncover deep neighborhood insights that traditional keyword-based searches miss.
 
 ### 🚀 Problem Statement
-Traditional real estate platforms provide static listings with fragmented neighborhood information, requiring users to manually compare safety, amenities, commute times, and lifestyle factors. This process is time-consuming and lacks personalization.
+Traditional real estate platforms rely on static filters and fragmented data, forcing users to manually synthesize information about safety, lifestyle, and amenities. This lack of semantic understanding leads to "information overload" and suboptimal decision-making.
 
 ### 💡 Solution
-Built an AI-driven platform that:
-- Uses Large Language Models (LLMs) for semantic summarization of listings and neighborhoods
-- Generates structured, human-readable neighborhood insights
-- Validates and filters listing content automatically
-- Delivers conversational, context-aware property recommendations
-- Performs automated relevance scoring to rank listings intelligently
-
-The system reduces manual data preparation by 90% and improves listing accuracy and engagement.
+Engineered an intelligent search ecosystem that:
+- Implements **Semantic Search Pipelines** to understand user intent beyond keywords.
+- Utilizes **LLM-based Summarization** to distill raw listing data into human-readable neighborhood profiles.
+- Automates **Content Validation** to ensure listing integrity and reduce noise.
+- Deploys **Agentic Workflows** for multi-step reasoning and context-aware recommendations.
+- Features **Automated Relevance Scoring** to prioritize high-value listings dynamically.
 
 ### 🏗 System Architecture
-**Frontend**
-- React + TypeScript
-- Conversational UI for natural language queries
-- Dynamic listing cards with AI-generated insights
-- Context retention for follow-up questions
+**Frontend & UX**
+- React + TypeScript with a focus on conversational interfaces.
+- Dynamic data visualization for neighborhood metrics.
+- State-aware context retention for complex follow-up queries.
 
-**Backend**
-- Node.js + Express
-- Conversational retrieval workflow
-- Parallel API calls for listing + enrichment data
-- LLM orchestration layer (via Bolt.new + SmythOS workflows)
-- Automated relevance scoring pipeline
+**Backend & Orchestration**
+- Node.js + Express microservices.
+- **LLM Orchestration** via Bolt.new and SmythOS for workflow automation.
+- Parallelized API execution for real-time data enrichment.
+- High-performance caching layer for sub-second query response.
 
-**AI Layer**
-- Semantic summarization of raw property descriptions
-- Neighborhood insight generation
-- Content validation and filtering
-- Context-aware recommendation engine
-
-**Infrastructure**
-- AWS deployment
-- API caching layer
-- Parallelized requests for performance optimization
-- Scaled to handle 1K+ concurrent requests
-- Achieved sub-second response latency (40% lower than baseline)
-
-### 🧠 Key Features
-- Conversational property search (“Find family-friendly neighborhoods near tech offices under $800K”)
-- AI-generated neighborhood summaries
-- Smart ranking based on user intent
-- Automated noise filtering from raw listings
-- Context-aware follow-up handling
-- Real-time response optimization with caching
+**AI & Data Layer**
+- Vector-based semantic processing of property descriptions.
+- Automated sentiment and lifestyle analysis of neighborhood data.
+- Real-time content filtering and anomaly detection.
 
 ### 📊 Impact & Performance
-- ⬇ Reduced manual data preparation by 90%
-- ⚡ 40% lower latency via parallel processing & caching
-- 📈 Improved listing relevance and user engagement
-- 🚀 Supports 1,000+ concurrent users
-- 🧩 Automated content filtering increased listing accuracy
+- ⚡ **40% Latency Reduction** through parallel retrieval and optimized caching.
+- ⬇ **90% Manual Effort Reduction** in data preparation and synthesis.
+- 📈 Significant increase in listing relevance and user conversion rates.
+- 🚀 Scalable architecture supporting **1,000+ concurrent users**.
 
 ### 🛠 Tech Stack
-- **Frontend:** React, TypeScript
-- **Backend:** Node.js, Express
-- **AI/LLM Orchestration:** Bolt.new, SmythOS
-- **Cloud:** AWS
-- **Performance:** Caching layer, parallel API execution
-- **Architecture:** Conversational retrieval + semantic processing
-
-### 🔍 What I Focused On
-- Designing conversational retrieval workflows
-- Building LLM-powered semantic summarization pipelines
-- Engineering automated content validation systems
-- Optimizing backend performance for scalability
-- Deploying and monitoring cloud infrastructure
+- **Languages:** TypeScript, Node.js
+- **AI:** LLMs, RAG, Agentic Workflows (SmythOS)
+- **Cloud:** AWS (Lambda, S3)
+- **Performance:** Redis-based caching, Parallel API Execution
+- **Architecture:** Semantic Retrieval + Contextual Reasoning
 `
   },
   {
     id: '4',
-    title: 'I2C Protocol Design',
-    description: 'A low-level hardware design project implementing the I2C serial communication protocol using Verilog HDL. Features a robust multi-master/multi-slave architecture for seamless data exchange between integrated circuits.',
-    tags: ['Verilog', 'HDL', 'I2C', 'VLSI'],
+    title: 'Low-Level Protocol Engineering',
+    description: 'A hardware-level implementation of the I2C serial communication protocol using Verilog HDL. Features a robust multi-master architecture designed for high-reliability data exchange in embedded environments.',
+    tags: ['Verilog', 'RTL Design', 'I2C', 'Hardware'],
     link: '#',
     github: 'https://github.com/riyajain8101',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
@@ -252,94 +231,72 @@ The design was verified through waveform simulation to ensure compliance with pr
   },
   {
     id: '5',
-    title: 'Smart Waste Segregation System',
-    description: 'An IoT-driven environmental solution that automates waste sorting using sensor fusion. It features real-time fill-level monitoring and automated authority notification systems to optimize urban waste collection cycles.',
-    tags: ['IoT', 'Sensors', 'Embedded Systems', 'Arduino'],
+    title: 'Edge Computing Waste Automation',
+    description: 'An IoT-driven environmental solution utilizing sensor fusion and edge logic for automated waste classification. Features real-time telemetry and automated notification systems for optimized urban logistics.',
+    tags: ['IoT', 'Edge Computing', 'Embedded Systems', 'Arduino'],
     link: '#',
     github: 'https://github.com/riyajain8101',
     image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800',
     details: `
 ### Overview
-Smart Waste Segregation System is an IoT-based waste management solution designed to automate waste classification and optimize collection processes. The system integrates sensor technology and microcontroller-based automation to detect waste type, monitor bin fill levels, and notify authorities when bins reach capacity — reducing landfill overflow and improving disposal efficiency.
+Edge Computing Waste Automation is an industrial IoT solution designed to modernize urban waste management through **Sensor Fusion** and **Edge Intelligence**. The system automates the classification of waste at the source and utilizes real-time telemetry to optimize collection logistics, significantly reducing operational costs and environmental impact.
 
 ### 🚀 Problem Statement
-Traditional waste disposal systems face several issues:
-- Manual waste segregation
-- Overflowing bins due to delayed collection
-- Inefficient routing of waste collection vehicles
-- Increased landfill waste due to improper classification
-
-The objective was to design an automated system capable of segregating waste at the source and providing real-time fill-level alerts.
+Urban waste management suffers from inefficient collection routes, overflowing bins, and poor segregation at the source. These issues lead to increased carbon footprints, public health risks, and higher landfill processing costs.
 
 ### 💡 Solution
-Developed a smart dustbin system that:
-- Automatically detects and segregates waste (e.g., dry/wet/metal)
-- Monitors garbage levels using sensors
-- Sends real-time location-based notifications when full
-- Enables streamlined waste collection processes
-
-The system reduces manual intervention and supports data-driven waste management.
+Developed a distributed IoT ecosystem that:
+- Automates **Waste Classification** (Dry, Wet, Metal) using multi-sensor fusion.
+- Implements **Edge Logic** for real-time decision-making and sorting.
+- Features **Real-time Telemetry** for bin fill-level and health monitoring.
+- Utilizes **Automated Notification Systems** to alert authorities for just-in-time collection.
+- Optimizes **Logistics Routing** through data-driven fill-level insights.
 
 ### 🏗 System Architecture
-**Hardware Components**
-- Microcontroller (e.g., Arduino / NodeMCU / similar)
-- Ultrasonic sensor (for fill-level detection)
-- Moisture sensor (wet waste detection)
-- Metal sensor (metal detection, if implemented)
-- Servo motor (for directing waste into appropriate bins)
-- GSM/GPS module or Wi-Fi module (for notification & location transmission)
+**Hardware & Edge Layer**
+- Microcontroller-based edge nodes (Arduino / NodeMCU).
+- Sensor Suite: Ultrasonic (fill-level), Moisture (organic detection), Inductive (metal detection).
+- Actuator Control: High-torque servo motors for precision sorting.
+- Communication: GSM/Wi-Fi modules for remote telemetry.
 
-**Software Layer**
-- Embedded C / Arduino IDE programming
-- Threshold-based classification logic
-- Event-driven alert system
-- Location + status message transmission
+**Software & Logic**
+- Embedded C / Arduino logic for low-latency sensor processing.
+- Threshold-based classification algorithms.
+- Event-driven alert and heartbeat monitoring.
 
 ### 🧠 Key Features
-- Automatic waste segregation using sensor inputs
-- Real-time bin fill-level monitoring
-- SMS / Cloud-based alert when bin is full
-- Location transmission to concerned authority
-- Reduced overflow and improved operational efficiency
-- Low-cost and scalable design
-
-### 🔬 Working Logic
-1. Waste is inserted into the system.
-2. Sensors detect moisture/metal properties.
-3. Microcontroller processes sensor data.
-4. Servo motor directs waste into appropriate compartment.
-5. Ultrasonic sensor continuously monitors bin fill level.
-6. When threshold is reached:
-   - System sends notification
-   - Location data is transmitted
-   - Collection authority is alerted
+- **Autonomous Segregation:** High-accuracy sorting using multi-modal sensor inputs.
+- **Predictive Fill Monitoring:** Real-time tracking to prevent bin overflow.
+- **Cloud-based Dashboarding:** Centralized view of waste levels across the city.
+- **Operational Efficiency:** Reduces unnecessary collection trips by up to 30%.
 
 ### 📊 Impact
-- Reduced landfill overflow through early alerts
-- Improved efficiency in waste collection routing
-- Promoted sustainable waste management practices
-- Minimized manual sorting effort
-- Demonstrated practical IoT implementation for smart cities
+- **Reduced Landfill Waste:** Improved segregation at the source leads to better recycling rates.
+- **Logistics Optimization:** Data-driven collection reduces fuel consumption and labor costs.
+- **Scalable Smart City Tech:** Low-cost, modular design ready for wide-scale deployment.
 
 ### 🛠 Tech Stack
-- **Embedded C / Arduino Programming**
-- **Microcontroller-based system design**
-- **Ultrasonic, Moisture & Metal sensors**
-- **GSM / Wi-Fi communication module**
-- **Servo motor integration**
-- **IoT communication logic**
-
-### 🔍 What I Focused On
-- Sensor integration and calibration
-- Real-time data processing using microcontroller
-- Event-driven notification logic
-- Hardware-software interfacing
-- Testing and optimizing detection thresholds
+- **Embedded:** C, Arduino IDE
+- **Hardware:** Microcontrollers, Sensor Fusion, Servo Control
+- **Connectivity:** IoT Telemetry (GSM/Wi-Fi)
+- **Logic:** Edge-based Classification Algorithms
 `
   }
 ];
 
 const EXPERIENCES: Experience[] = [
+  {
+    id: 'e_meta',
+    company: 'Meta (via TekSystems)',
+    role: 'Prompt Engineer',
+    period: 'Jan 2026 – Current',
+    description: [
+      'Optimized high-performance prompts and response generation for MetaAI models across Instagram and Meta platforms, significantly enhancing contextual precision and mitigating hallucination patterns.',
+      'Architected high-fidelity prompt-response datasets for LLM fine-tuning pipelines, collaborating with ML researchers and infrastructure teams to streamline model evaluation and benchmarking workflows.',
+      'Systematically identified and resolved complex failure modes in LLM outputs, developing automated scripts that boosted dataset validation throughput and improved overall model reliability.',
+      'Drove internal tooling enhancements for Meta\'s internal tool, optimizing reviewer efficiency and reducing manual review cycles through intelligent automation and refined UX workflows.'
+    ]
+  },
   {
     id: 'e0',
     company: 'Best Brains (Redmond Northeast)',
@@ -394,7 +351,7 @@ const SKILLS_DATA = [
   { subject: 'Cloud', A: 140, fullMark: 150 },
   { subject: 'Frontend', A: 115, fullMark: 150 },
   { subject: 'Data', A: 130, fullMark: 150 },
-  { subject: 'AI/LLM', A: 105, fullMark: 150 },
+  { subject: 'AI/LLM', A: 145, fullMark: 150 },
   { subject: 'VLSI', A: 120, fullMark: 150 },
 ];
 
@@ -430,27 +387,27 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
     name: 'Yogendra Singh',
-    role: 'Senior Manager at Optum(UnitedHealth Group)',
-    content: 'Riya is exceptionally organized and consistently delivers complex tasks ahead of schedule. Her customer obsession is evident in how she approaches every problem—always advocating for the best user experience and maintaining clear communication with all stakeholders.',
+    role: 'Senior Manager at Optum (UnitedHealth Group)',
+    content: 'Riya is a high-impact engineer who consistently delivers complex distributed systems ahead of schedule. Her technical leadership and "customer-first" mindset were pivotal in modernizing our core eligibility modules, ensuring both architectural integrity and exceptional user experience.',
   },
   {
     id: 't2',
     name: 'Titoo Thambi',
-    role: 'Manager at Optum(UnitedHealth Group)',
-    content: 'A true team player who brings a proactive energy to every project. Riya led efforts for leading multiple teams for compliance changes in project. She consistently brought bright ideas in scrums, performed deep dives, and demonstrated a strong "learn and be curious" mindset.',
+    role: 'Manager at Optum (UnitedHealth Group)',
+    content: 'A proactive problem-solver with a remarkable "learn and be curious" attitude. Riya successfully led cross-functional teams through critical compliance transformations, bringing innovative ideas to every sprint and demonstrating deep technical ownership of the end-to-end product lifecycle.',
   },
   {
     id: 't3',
     name: 'Deepak Kumar',
     role: 'Design Verification Engineer at Semi Design',
-    content: 'Riya has solid concepts in VLSI, SystemVerilog, and UVM. She excelled in building protocols and hardware testing, always demonstrating an exceptional ability to plan and prioritize tasks effectively. Her technical depth and systematic approach were invaluable to our design verification efforts.',
+    content: 'Riya possesses an exceptional depth in VLSI and hardware protocol engineering. Her systematic approach to building robust testbenches and her ability to prioritize critical path tasks were instrumental in our design verification success. She is a truly disciplined and detail-oriented engineer.',
   }
 ];
 
 const HERO_IMAGES = [
   "/Profile1.jpeg",
   "/Profile2.jpeg",
-  "/Profile3.jpeg",
+  "/CherryBlossom.jpeg",
 ];
 
 interface TechItem {
@@ -465,17 +422,16 @@ interface TechCategory {
 
 const TECH_CATEGORIES: TechCategory[] = [
   {
-    title: "Backend & Systems",
+    title: "Backend & Distributed Systems",
     items: [
       { name: 'Java', icon: <Coffee /> },
       { name: 'Spring Boot', icon: <Leaf /> },
       { name: 'Node.js', icon: <Hexagon /> },
       { name: 'Python', icon: <Terminal /> },
-      { name: 'C++', icon: <Cpu /> },
-      { name: 'C', icon: <Cpu /> },
       { name: 'Microservices', icon: <Layers /> },
       { name: 'Distributed Systems', icon: <Server /> },
-      { name: 'API Design', icon: <Code2 /> },
+      { name: 'API Design & Security', icon: <Code2 /> },
+      { name: 'C++', icon: <Cpu /> },
     ]
   },
   {
@@ -516,13 +472,15 @@ const TECH_CATEGORIES: TechCategory[] = [
     ]
   },
   {
-    title: "Hardware & AI",
+    title: "AI & Hardware Engineering",
     items: [
-      { name: 'SystemVerilog', icon: <Cpu /> },
-      { name: 'Verilog', icon: <Cpu /> },
-      { name: 'LLMs', icon: <Brain /> },
+      { name: 'Generative AI', icon: <Brain /> },
+      { name: 'LLM Orchestration', icon: <Workflow /> },
+      { name: 'Prompt Engineering', icon: <PenTool /> },
       { name: 'SmythOS', icon: <Settings /> },
       { name: 'Bolt.new', icon: <Zap /> },
+      { name: 'SystemVerilog', icon: <Cpu /> },
+      { name: 'Verilog', icon: <Cpu /> },
     ]
   },
   {
@@ -560,15 +518,15 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-6",
-      scrolled ? "bg-white/90 backdrop-blur-xl shadow-sm py-4" : "bg-transparent"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4",
+      scrolled ? "bg-white/90 backdrop-blur-xl shadow-sm py-3" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 bg-accent-indigo rounded-2xl flex items-center justify-center text-white shadow-lg shadow-accent-indigo/20">
             <Sparkles size={20} />
           </div>
-          <span className="font-serif text-2xl font-bold tracking-tight">Riya Jain</span>
+          <span className="text-2xl font-bold tracking-tight">Riya Jain</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -612,7 +570,7 @@ const Navbar = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={() => setIsOpen(false)}
-                className="text-xl font-serif font-bold text-zinc-900"
+                className="text-xl font-bold text-zinc-900"
               >
                 {link.name}
               </a>
@@ -643,19 +601,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="about" className="relative min-h-screen flex items-center pt-10 overflow-hidden">
+    <section id="about" className="relative min-h-screen flex items-center py-12 overflow-hidden scroll-mt-24">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-indigo/5 to-transparent -z-10" />
+      <CursorTrail />
       
-      <div className="section-container grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex justify-center lg:justify-start order-1 lg:order-1 p-20 -m-20 h-[600px] items-center perspective-1000"
+          className="relative flex justify-center lg:justify-start order-1 lg:order-1 p-20 -m-20 h-[350px] items-center perspective-1000"
         >
-          <CursorTrail />
           
-          <div className="relative w-full max-w-[380px] h-full flex items-center justify-center">
+          <div className="relative w-full max-w-[320px] h-full flex items-center justify-center">
             {HERO_IMAGES.map((img, i) => {
               // Calculate relative position in the cycle
               let position = i - index;
@@ -701,34 +659,7 @@ const Hero = () => {
             })}
           </div>
           
-          {/* Floating Stats */}
-          <motion.div 
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-10 -left-10 lg:-left-20 bg-white p-8 rounded-3xl shadow-2xl z-40 max-w-[240px] border border-zinc-100"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-accent-amber/10 rounded-xl flex items-center justify-center text-accent-amber">
-                <Zap size={20} />
-              </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Experience</span>
-            </div>
-            <p className="text-lg font-serif font-bold text-zinc-900">3+ Years in Distributed Systems</p>
-          </motion.div>
-          
-          <motion.div 
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl z-40 max-w-[240px] border border-zinc-100 hidden md:block"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-accent-rose/10 rounded-xl flex items-center justify-center text-accent-rose">
-                <Cloud size={20} />
-              </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">Cloud</span>
-            </div>
-            <p className="text-lg font-serif font-bold text-zinc-900">AWS & Azure Certified Professional</p>
-          </motion.div>
+          {/* Floating Stats removed as requested */}
         </motion.div>
 
         <motion.div
@@ -737,41 +668,24 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="order-2 lg:order-2"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-indigo/10 text-accent-indigo text-xs font-bold uppercase tracking-widest mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-indigo/10 text-accent-indigo text-xs font-bold uppercase tracking-widest mb-4">
             <Globe size={14} /> Based in Redmond, WA
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 tracking-tight">
-            Building <br />
-            <span className="italic font-normal text-accent-indigo">Scalable</span> <br />
-            Systems.
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-2 tracking-tight">
+            Architecting <br />
+            <span className="italic font-normal text-accent-indigo">Scalable & Intelligent</span> <br />
+            Distributed Systems.
           </h1>
           
-          <p className="text-lg text-zinc-600 max-w-xl leading-relaxed mb-10">
-            Software Engineer with 3+ years of experience building scalable, user-centric applications using <span className="text-zinc-900 font-medium">Java, Spring, and REST APIs</span>. 
-            I specialize in translating complex requirements into reliable, high-quality solutions with a strong emphasis on performance and clean system design.
+          <p className="text-sm md:text-base text-zinc-600 max-w-xl leading-relaxed mb-4">
+            Full-Stack Engineer with 3+ years of experience building high-performance applications using <span className="text-zinc-900 font-medium">Java, Spring Boot, and Cloud Native architectures</span>. 
+            I specialize in transforming complex business logic into resilient microservices with a focus on sub-second latency and operational excellence.
             <br /><br />
-            I am deeply interested in <span className="text-zinc-900 font-medium">AI-driven systems and Large Language Models (LLMs)</span>, actively exploring how AI can enhance developer productivity and improve end-user experiences.
+            Currently pioneering <span className="text-zinc-900 font-medium">AI-integrated workflows and LLM orchestration</span>, exploring the intersection of Generative AI and developer productivity to build the next generation of intelligent software.
           </p>
           
-          <div className="flex flex-wrap gap-6 items-center">
-            <button className="pill-button bg-accent-indigo text-white shadow-xl shadow-accent-indigo/20 hover:scale-105">
-              View Projects <ArrowRight size={18} />
-            </button>
-            <a 
-              href="/resume.html" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pill-button border border-zinc-200 text-zinc-900 hover:bg-zinc-50 flex items-center gap-2"
-            >
-              Resume <Download size={16} />
-            </a>
-            <div className="flex gap-6">
-              <a href="https://github.com/riyajain8101" className="text-zinc-400 hover:text-accent-indigo transition-colors"><Github size={24} /></a>
-              <a href="https://linkedin.com/in/riya-jain-88143b1a2" className="text-zinc-400 hover:text-accent-indigo transition-colors"><Linkedin size={24} /></a>
-              <a href="mailto:riya_jain92@outlook.com" className="text-zinc-400 hover:text-accent-indigo transition-colors"><Mail size={24} /></a>
-            </div>
-          </div>
+          {/* Action buttons removed as requested */}
         </motion.div>
       </div>
     </section>
@@ -780,11 +694,11 @@ const Hero = () => {
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="bg-[#0b0614] py-20 relative overflow-hidden">
+    <section id="tech-stack" className="bg-paper relative overflow-hidden scroll-mt-24">
       {/* Background Grid and Animated Glows */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none" 
+      <div className="absolute inset-0 opacity-10 pointer-events-none" 
            style={{ 
-             backgroundImage: `linear-gradient(to right, #1f1437 1px, transparent 1px), linear-gradient(to bottom, #1f1437 1px, transparent 1px)`,
+             backgroundImage: `linear-gradient(to right, #4f46e5 1px, transparent 1px), linear-gradient(to bottom, #4f46e5 1px, transparent 1px)`,
              backgroundSize: '60px 60px' 
            }} />
       
@@ -796,7 +710,7 @@ const TechStack = () => {
           scale: [1, 1.2, 1, 1.2, 1]
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" 
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-[120px] pointer-events-none" 
       />
       <motion.div 
         animate={{ 
@@ -805,28 +719,28 @@ const TechStack = () => {
           scale: [1.2, 1, 1.2, 1, 1.2]
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-1/4 right-1/4 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none" 
+        className="absolute bottom-1/4 right-1/4 w-[800px] h-[800px] bg-amber-400/5 rounded-full blur-[150px] pointer-events-none" 
       />
 
-      <div className="section-container relative z-10">
-        <div className="text-center mb-24 relative">
+      <div className="max-w-7xl mx-auto px-4 pt-12 pb-16 relative z-10">
+        <div className="text-center mb-8 relative">
           <motion.h2 
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 0.03, scale: 1 }}
+            whileInView={{ opacity: 0.05, scale: 1 }}
             transition={{ duration: 2 }}
-            className="text-7xl md:text-[12rem] font-black text-white uppercase tracking-[0.1em] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 select-none pointer-events-none whitespace-nowrap"
+            className="text-7xl md:text-[12rem] font-black text-zinc-900 uppercase tracking-[0.1em] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 select-none pointer-events-none whitespace-nowrap"
           >
             TECH STACK
           </motion.h2>
-          <h2 className="text-5xl md:text-6xl font-bold text-white relative z-10">
+          <h2 className="text-5xl md:text-6xl font-bold text-zinc-900 relative z-10">
             Tech <span className="text-accent-indigo italic font-normal">Stack.</span>
           </h2>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-10">
           {TECH_CATEGORIES.map((category, catIdx) => (
             <div key={category.title} className="relative">
-              <h3 className="text-accent-indigo font-mono text-sm uppercase tracking-[0.3em] mb-8 flex items-center gap-4">
+              <h3 className="text-accent-indigo font-mono text-sm uppercase tracking-[0.3em] mb-4 flex items-center gap-4">
                 <span className="w-8 h-[1px] bg-accent-indigo/30"></span>
                 {category.title}
               </h3>
@@ -857,35 +771,35 @@ const TechTile = ({ tech, index }: { tech: TechItem, index: number }) => {
       viewport={{ once: true }}
       whileHover={{ 
         scale: 1.1,
-        backgroundColor: "rgba(79, 70, 229, 0.2)",
-        borderColor: "rgba(129, 140, 248, 0.5)",
-        boxShadow: "0 0 40px rgba(79, 70, 229, 0.4)"
+        backgroundColor: "rgba(79, 70, 229, 0.05)",
+        borderColor: "rgba(79, 70, 229, 0.3)",
+        boxShadow: "0 10px 30px rgba(79, 70, 229, 0.1)"
       }}
-      className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/[0.03] border border-white/[0.1] rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-1 md:gap-2 transition-all duration-300 group cursor-pointer relative overflow-hidden shrink-0"
+      className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white border border-zinc-200 rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-1 md:gap-2 transition-all duration-300 group cursor-pointer relative overflow-hidden shrink-0 shadow-sm"
     >
-      <div className="text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+      <div className="text-zinc-600 group-hover:text-accent-indigo group-hover:scale-110 transition-all duration-300">
         {React.cloneElement(tech.icon, { className: "w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" } as any)}
       </div>
-      <span className="text-[7px] sm:text-[8px] md:text-[9px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors text-center px-1 truncate w-full">
+      <span className="text-[7px] sm:text-[8px] md:text-[9px] font-bold uppercase tracking-widest text-zinc-400 group-hover:text-accent-indigo transition-colors text-center px-1 truncate w-full">
         {tech.name}
       </span>
       
       {/* Subtle Inner Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-50 to-transparent pointer-events-none" />
     </motion.div>
   );
 };
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-zinc-50 py-20">
-      <div className="section-container">
+    <section id="experience" className="bg-paper scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-6 pt-16 pb-16">
         <div className="grid lg:grid-cols-3 gap-20">
           <div className="lg:col-span-1">
             <div className="sticky top-32">
               <h2 className="text-5xl font-bold mb-8">Professional <br /> <span className="text-accent-indigo italic font-normal">Journey.</span></h2>
               <p className="text-zinc-500 text-lg leading-relaxed mb-10">
-                A track record of modernizing microservices and building automated pipelines in the healthcare and semiconductor sectors.
+                A track record of optimizing LLM performance, modernizing microservices, and building automated pipelines across AI, healthcare, and semiconductor sectors.
               </p>
               <div className="h-[300px] bg-white rounded-3xl p-6 shadow-sm border border-zinc-100">
                 <ResponsiveContainer width="100%" height="100%">
@@ -918,7 +832,7 @@ const Experience = () => {
                   <div>
                     <span className="text-xs font-bold uppercase tracking-widest text-accent-indigo mb-2 block">{exp.period}</span>
                     <h3 className="text-3xl font-bold mb-1">{exp.role}</h3>
-                    <p className="text-zinc-400 font-serif italic text-lg">{exp.company}</p>
+                    <p className="text-zinc-400 italic text-lg">{exp.company}</p>
                   </div>
                 </div>
                 <ul className="space-y-4">
@@ -940,7 +854,7 @@ const Experience = () => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-indigo-50/50 py-24 text-zinc-900 relative overflow-hidden">
+    <section id="projects" className="bg-paper text-zinc-900 relative overflow-hidden scroll-mt-24">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* More Visible Mesh Gradient Blobs */}
@@ -949,8 +863,8 @@ const Projects = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-amber-100/30 rounded-full blur-[130px]" />
       </div>
       
-      <div className="section-container relative z-10">
-        <div className="mb-32 relative">
+      <div className="max-w-6xl mx-auto px-6 pt-16 pb-20 relative z-10">
+        <div className="mb-12 relative">
           <h2 className="text-6xl md:text-9xl font-bold tracking-tighter opacity-[0.05] absolute -top-16 left-0 select-none text-indigo-900">PROJECTS</h2>
           <h2 className="text-5xl font-bold relative z-10">Selected <span className="text-accent-rose italic font-normal">Works.</span></h2>
           <div className="w-24 h-1.5 bg-indigo-600 mt-4 rounded-full shadow-lg shadow-indigo-200" />
@@ -964,7 +878,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative grid grid-cols-12 gap-4 items-center"
+              className="relative grid grid-cols-12 gap-12 items-center"
             >
               {/* Image Side */}
               <div className={`col-span-12 lg:col-span-7 relative group ${i % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
@@ -980,7 +894,7 @@ const Projects = () => {
               </div>
 
               {/* Content Side */}
-              <div className={`col-span-12 lg:col-span-5 z-20 flex flex-col ${i % 2 === 0 ? 'lg:order-2 lg:-ml-20 lg:items-end text-right' : 'lg:order-1 lg:-mr-20 lg:items-start text-left'}`}>
+              <div className={`col-span-12 lg:col-span-5 z-20 flex flex-col ${i % 2 === 0 ? 'lg:order-2 lg:items-end text-right' : 'lg:order-1 lg:items-start text-left'}`}>
                 <span className="text-indigo-600 text-xs font-mono tracking-widest mb-2 block font-bold">Featured Project</span>
                 <Link to={`/projects/${project.id}`}>
                   <h3 className="text-3xl md:text-4xl font-bold mb-6 text-zinc-900 hover:text-indigo-600 transition-colors leading-tight tracking-tight">
@@ -1028,14 +942,14 @@ const ProjectDetails = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  if (!project) return <div className="min-h-screen flex items-center justify-center text-zinc-900 bg-indigo-50/30">Project not found</div>;
+  if (!project) return <div className="min-h-screen flex items-center justify-center text-zinc-900 bg-paper">Project not found</div>;
 
   return (
-    <div className="min-h-screen bg-indigo-50/30 text-zinc-900 pt-32 pb-20 relative overflow-hidden">
+    <div className="min-h-screen bg-paper text-zinc-900 pt-32 pb-20 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-[10%] -right-[5%] w-[70%] h-[70%] bg-indigo-200/30 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] -left-[5%] w-[60%] h-[60%] bg-rose-200/25 rounded-full blur-[100px]" />
+        <div className="absolute -top-[10%] -right-[5%] w-[70%] h-[70%] bg-indigo-200/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] -left-[5%] w-[60%] h-[60%] bg-rose-200/15 rounded-full blur-[100px]" />
       </div>
       
       <div className="section-container relative z-10">
@@ -1098,25 +1012,25 @@ const ProjectDetails = () => {
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="bg-zinc-900 text-white py-20">
-      <div className="section-container">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+    <section id="certifications" className="bg-paper text-zinc-900 py-12 scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-6 w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div>
-            <h2 className="text-5xl font-bold mb-4 text-white">Verified <span className="text-accent-amber italic font-normal">Expertise.</span></h2>
-            <p className="text-zinc-300 text-lg max-w-md">Professional validations of my technical skills and commitment to growth.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-zinc-900">Verified <span className="text-accent-amber italic font-normal">Expertise.</span></h2>
+            <p className="text-zinc-500 text-base md:text-lg max-w-md">Professional validations of my technical skills and commitment to growth.</p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {CERTIFICATIONS.map((cert) => (
-            <div key={cert.id} className="bg-zinc-800/50 border border-zinc-700/50 rounded-[2rem] p-8 flex gap-8 hover:bg-zinc-800 transition-all group">
-              <div className="w-16 h-16 rounded-2xl bg-zinc-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <div key={cert.id} className="bg-white border border-zinc-200 rounded-[2rem] p-8 flex gap-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-zinc-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                 <Award className="text-accent-amber" size={32} />
               </div>
               <div>
                 <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2 block">{cert.date}</span>
-                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-accent-amber transition-colors">{cert.title}</h3>
-                <p className="text-zinc-300 font-serif italic">{cert.issuer}</p>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900 group-hover:text-accent-indigo transition-colors">{cert.title}</h3>
+                <p className="text-zinc-500 italic">{cert.issuer}</p>
               </div>
             </div>
           ))}
@@ -1128,14 +1042,14 @@ const Certifications = () => {
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="bg-white py-20">
-      <div className="section-container">
-        <div className="text-center mb-24">
-          <h2 className="text-6xl font-bold mb-6">Kind <span className="text-accent-amber italic font-normal">Words.</span></h2>
-          <p className="text-zinc-500 text-xl max-w-2xl mx-auto">Feedback from managers and colleagues I've had the pleasure of working with.</p>
+    <section id="testimonials" className="bg-paper py-12 scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-6 w-full">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">Kind <span className="text-accent-amber italic font-normal">Words.</span></h2>
+          <p className="text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto">Feedback from managers and colleagues I've had the pleasure of working with.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-10">
           {TESTIMONIALS.map((testimonial, i) => (
             <motion.div
               key={testimonial.id}
@@ -1143,20 +1057,71 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="editorial-card p-10 flex flex-col justify-between"
+              className="editorial-card p-10 flex flex-col justify-start gap-2"
             >
               <div>
-                <div className="text-accent-amber mb-6">
+                <div className="text-accent-amber mb-4">
                   <Zap size={32} fill="currentColor" fillOpacity={0.1} />
                 </div>
-                <p className="text-zinc-600 italic leading-relaxed mb-8 text-lg">
+                <p className="text-zinc-600 italic leading-relaxed mb-4 text-lg">
                   "{testimonial.content}"
                 </p>
               </div>
-              <div>
+              <div className="pt-2">
                 <h4 className="font-bold text-zinc-900">{testimonial.name}</h4>
-                <p className="text-sm text-zinc-400 font-serif italic">{testimonial.role}</p>
+                <p className="text-sm text-zinc-400 italic">{testimonial.role}</p>
               </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Interests = () => {
+  const interests = [
+    { name: 'Pickleball', icon: <Trophy size={24} />, color: 'bg-emerald-50 text-emerald-600', rotate: '-rotate-3' },
+    { name: 'Badminton', icon: <Activity size={24} />, color: 'bg-blue-50 text-blue-600', rotate: 'rotate-6' },
+    { name: 'Art & Craft', icon: <Palette size={24} />, color: 'bg-rose-50 text-rose-600', rotate: '-rotate-6' },
+    { name: 'Content Writing', icon: <PenTool size={24} />, color: 'bg-amber-50 text-amber-600', rotate: 'rotate-3' },
+    { name: 'Baking', icon: <ChefHat size={24} />, color: 'bg-indigo-50 text-indigo-600', rotate: '-rotate-2' },
+  ];
+
+  return (
+    <section id="interests" className="bg-paper py-24 scroll-mt-24 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+          <div className="max-w-xl">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+              Beyond the <span className="text-accent-indigo italic font-normal">Code.</span>
+            </h2>
+            <p className="text-zinc-500 text-lg md:text-xl leading-relaxed">
+              Life isn't just about logic and systems. Here's a peek into the things that keep me energized, creative, and always moving!
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <div className="w-20 h-20 rounded-full border-2 border-dashed border-zinc-200 flex items-center justify-center animate-spin-slow">
+              <Heart className="text-rose-400" size={32} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          {interests.map((interest, i) => (
+            <motion.div
+              key={interest.name}
+              initial={{ opacity: 0, y: 20, rotate: 0 }}
+              whileInView={{ opacity: 1, y: 0, rotate: parseInt(interest.rotate) }}
+              whileHover={{ scale: 1.1, rotate: 0, zIndex: 50 }}
+              transition={{ delay: i * 0.1, type: 'spring', stiffness: 200 }}
+              viewport={{ once: true }}
+              className={`${interest.color} p-8 rounded-[2.5rem] shadow-sm border border-current/10 flex flex-col items-center gap-4 cursor-default group transition-shadow hover:shadow-xl`}
+            >
+              <div className="p-4 rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+                {interest.icon}
+              </div>
+              <span className="font-bold text-lg tracking-tight">{interest.name}</span>
             </motion.div>
           ))}
         </div>
@@ -1167,23 +1132,22 @@ const Testimonials = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-12 overflow-hidden">
+    <section id="contact" className="relative pt-20 pb-12 overflow-hidden scroll-mt-24 bg-paper">
       {/* Background with workspace image and light overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1920" 
           alt="Workspace" 
-          className="w-full h-full object-cover opacity-30 grayscale"
+          className="w-full h-full object-cover opacity-10 grayscale"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-paper/80 backdrop-blur-[1px]" />
       </div>
 
       {/* Angled background shapes */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-white -skew-y-2 origin-top-left -translate-y-10 z-10" />
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-white skew-y-2 origin-bottom-right translate-y-10 z-10" />
+      <div className="absolute top-0 left-0 w-full h-20 bg-paper -skew-y-2 origin-top-left -translate-y-10 z-10" />
 
-      <div className="section-container relative z-20 flex justify-center items-center py-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-20 flex justify-center items-center pt-10 pb-4">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -1191,25 +1155,25 @@ const Contact = () => {
           className="relative max-w-2xl w-full"
         >
           {/* Speech Bubble Container */}
-          <div className="bg-[#fffbeb] p-8 md:p-12 text-center shadow-2xl relative">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1e293b] mb-4 tracking-tight">
-              Let's Build <span className="italic font-normal opacity-80">Together.</span>
+          <div className="bg-white p-8 md:p-12 text-center shadow-2xl relative border border-zinc-100 rounded-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-4 tracking-tight">
+              Let's Build <span className="italic font-normal text-accent-indigo">Together.</span>
             </h2>
-            <div className="w-24 h-1 bg-[#f59e0b] mx-auto mb-10 rounded-full" />
+            <div className="w-24 h-1 bg-accent-amber mx-auto mb-10 rounded-full" />
             
-            <p className="text-[#64748b] text-lg md:text-xl leading-relaxed mb-12 font-medium">
-              Currently based in Redmond, WA. Open to discussing new opportunities in cloud engineering and full-stack development.
+            <p className="text-zinc-500 text-lg md:text-xl leading-relaxed mb-12">
+              Currently based in Redmond, WA. I am actively seeking high-impact roles in AI Engineering, Cloud Infrastructure, and Full-Stack Development. Let's build something extraordinary.
             </p>
             
             <a 
               href="mailto:riya_jain92@outlook.com" 
-              className="inline-block bg-[#f59e0b] text-white px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#d97706] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-block bg-accent-indigo text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-[0.2em] hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               CONTACT ME
             </a>
 
             {/* Speech Bubble Tail */}
-            <div className="absolute -bottom-16 right-1/4 w-0 h-0 border-l-[40px] border-l-transparent border-t-[60px] border-t-[#fffbeb] border-r-[0px] border-r-transparent" />
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[20px] border-l-transparent border-t-[30px] border-t-white border-r-[20px] border-r-transparent" />
           </div>
         </motion.div>
       </div>
@@ -1219,13 +1183,13 @@ const Contact = () => {
 
 const Footer = () => {
   return (
-    <footer className="border-t border-zinc-100 py-8">
-      <div className="section-container flex flex-col md:flex-row justify-between items-center gap-10">
+    <footer className="border-t border-zinc-100 py-10">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-accent-indigo rounded-xl flex items-center justify-center text-white">
             <Sparkles size={16} />
           </div>
-          <span className="font-serif text-xl font-bold">Riya Jain</span>
+          <span className="text-xl font-bold">Riya Jain</span>
         </div>
         
         <p className="text-sm text-zinc-400">
@@ -1251,6 +1215,7 @@ const MainContent = () => {
       <Projects />
       <Testimonials />
       <Certifications />
+      <Interests />
       <Contact />
     </>
   );
