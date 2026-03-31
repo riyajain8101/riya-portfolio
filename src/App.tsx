@@ -289,7 +289,7 @@ const EXPERIENCES: Experience[] = [
     id: 'e_meta',
     company: 'Meta (via TekSystems)',
     role: 'Prompt Engineer',
-    period: 'Jan 2026 – Current',
+    period: 'Feb 2026 – Current',
     description: [
       'Optimized high-performance prompts and response generation for MetaAI models across Instagram and Meta platforms, significantly enhancing contextual precision and mitigating hallucination patterns.',
       'Architected high-fidelity prompt-response datasets for LLM fine-tuning pipelines, collaborating with ML researchers and infrastructure teams to streamline model evaluation and benchmarking workflows.',
